@@ -7,14 +7,10 @@ class Clock {
         this.minutes = dateAndTime.getMinutes();
         this.seconds = dateAndTime.getSeconds();
 
-        this.printTime();
-
-        // setInterval(this._tick)
-
     }
 
     printTime() {
-
+        const time = [this.hours, this.minutes, this.seconds].join(":");
     }
 
     _tick() {
