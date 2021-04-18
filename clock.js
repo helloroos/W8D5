@@ -11,13 +11,14 @@ class Clock {
 
     printTime() {
         const time = [this.hours, this.minutes, this.seconds].join(":");
+        console.log(time);
     }
 
-    _tick() {
-        
-    }
 }
 
 // const clock = new Clock();
 
 // console.log(clock);
+
+
+Function

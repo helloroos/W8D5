@@ -1,0 +1,2 @@
+const reader = readline.createInterface({
+});
