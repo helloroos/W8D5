@@ -1,11 +1,13 @@
 class Clock {
-    constructor() {
+    constructor(version) {
         
         const dateAndTime = new Date(); 
 
         this.hours = dateAndTime.getHours();
         this.minutes = dateAndTime.getMinutes();
         this.seconds = dateAndTime.getSeconds();
+
+        if (version == )
 
     }
 
@@ -15,31 +17,32 @@ class Clock {
     }
 
     _tick() {
-        let that = this;
+        console.log('in `_thick`, `this` is: ', this)
+        // let that = this;
 
-        setInterval(function () {
-            if (that.seconds === 59) {
-                that.seconds = 0;
+        // setInterval(function () {
+        //     if (that.seconds === 59) {
+        //         that.seconds = 0;
 
-                if (that.minutes === 59) {
-                    that.minutes = 0;
+        //         if (that.minutes === 59) {
+        //             that.minutes = 0;
 
-                    if (that.hours === 23) {
-                        that.hours = 0;
-                    } else {
-                        that.hours += 1;
-                    }
+        //             if (that.hours === 23) {
+        //                 that.hours = 0;
+        //             } else {
+        //                 that.hours += 1;
+        //             }
 
-                } else {
-                    that.minutes += 1;
-                }
+        //         } else {
+        //             that.minutes += 1;
+        //         }
 
-            } else {
-                that.seconds += 1;
-            }
+        //     } else {
+        //         that.seconds += 1;
+        //     }
 
-            that.printTime.call(that);
-        }, 1000);
+        //     that.printTime.call(that);
+        // }, 1000);
 
 
     }
