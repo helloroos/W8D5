@@ -7,7 +7,9 @@ class Clock {
         this.minutes = dateAndTime.getMinutes();
         this.seconds = dateAndTime.getSeconds();
 
-        if (version == )
+        if (version == 2) {
+            this.intervalId = setInterval(this._tick.bind(this), 1000);
+        }
 
     }
 
@@ -17,7 +19,10 @@ class Clock {
     }
 
     _tick() {
-        console.log('in `_thick`, `this` is: ', this)
+        console.log('in `_thick`, `this` is: ', this);
+        this._incrementSeconds();
+        this.printTime();
+
         // let that = this;
 
         // setInterval(function () {
@@ -43,8 +48,6 @@ class Clock {
 
         //     that.printTime.call(that);
         // }, 1000);
-
-
     }
 
 }
@@ -54,4 +57,7 @@ class Clock {
 // console.log(clock);
 
 
-Function
+function demoClock(version) {
+    const clock = new Clock(version);
+    document.getElementById('stop-clock').onclick = () => clock
+}
